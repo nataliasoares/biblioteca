@@ -7,8 +7,7 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= //$this->Html->link(__('Edit Emprestimo'), ['action' => 'edit', $emprestimo->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Deletar Empréstimo'), ['action' => 'delete', $emprestimo->id], ['confirm' => __('Are you sure you want to delete # {0}?', $emprestimo->id)]) ?> </li>
+        <li><?= $this->Form->postLink(_('Deletar Empréstimo'), ['action' => 'delete', $emprestimo->id], ['confirm' => _('Are you sure you want to delete # {0}?', $emprestimo->id)]) ?> </li>
         <li><?= $this->Html->link(__('Listar Empréstimos'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('Novo Empréstimo'), ['action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('Listar Pessoas'), ['controller' => 'Pessoas', 'action' => 'index']) ?> </li>
@@ -22,11 +21,11 @@
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Pessoa') ?></th>
-            <td><?= $emprestimo->has('pessoa') ? $this->Html->link($emprestimo->pessoa->id, ['controller' => 'Pessoas', 'action' => 'view', $emprestimo->pessoa->id]) : '' ?></td>
+            <td><?= $emprestimo->has('pessoa') ? $this->Html->link($emprestimo->pessoa->nome, ['controller' => 'Pessoas', 'action' => 'view', $emprestimo->pessoa->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Livro') ?></th>
-            <td><?= $emprestimo->has('livro') ? $this->Html->link($emprestimo->livro->id, ['controller' => 'Livros', 'action' => 'view', $emprestimo->livro->id]) : '' ?></td>
+            <td><?= $emprestimo->has('livro') ? $this->Html->link($emprestimo->livro->nome, ['controller' => 'Livros', 'action' => 'view', $emprestimo->livro->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
