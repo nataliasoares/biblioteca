@@ -29,7 +29,7 @@ if (!$service->isEnabled() || php_sapi_name() === 'cli' || php_sapi_name() === '
 }
 
 $hasDebugKitConfig = ConnectionManager::getConfig('debug_kit');
-if (!$hasDebugKitConfig && !in_array('Postgres', PDO::getAvailableDrivers())) {
+if (!$hasDebugKitConfig && !in_array('sqlite', PDO::getAvailableDrivers())) {
     $msg = 'DebugKit not enabled. You need to either install pdo_sqlite, ' .
         'or define the "debug_kit" connection name.';
     Log::warning($msg);
