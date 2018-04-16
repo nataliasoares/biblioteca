@@ -8,6 +8,18 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Novo Usuário'), ['action' => 'add']) ?></li>
+        
+        <li class="heading"><?= __('Pessoa') ?></li>
+        <li><?= $this->Html->link(__('Novo Pessoa'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Listar Pessoas'), ['controller' => 'Pessoas', 'action' => 'index']) ?></li>
+        
+        <li class="heading"><?= __('Empréstimo') ?></li>
+        <li><?= $this->Html->link(__('Novo Empréstimo'), ['controller' => 'Emprestimos', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Listar Empréstimos'), ['controller' => 'Emprestimos', 'action' => 'index']) ?></li>
+
+        <li class="heading"><?= __('Livros') ?></li>
+        <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="users index large-9 medium-8 columns content">
