@@ -21,11 +21,11 @@
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Pessoa') ?></th>
-            <td><?= $emprestimo->has('pessoa') ? $this->Html->link($emprestimo->pessoa->id, ['controller' => 'Pessoas', 'action' => 'view', $emprestimo->pessoa->nome]) : '' ?></td>
+            <td><?= $emprestimo->has('pessoa') ? $this->Html->link($emprestimo->pessoa->nome, ['controller' => 'Pessoas', 'action' => 'view', $emprestimo->pessoa->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Livro') ?></th>
-            <td><?= $emprestimo->has('livro') ? $this->Html->link($emprestimo->livro->id, ['controller' => 'Livros', 'action' => 'view', $emprestimo->livro->nome]) : '' ?></td>
+            <td><?= $emprestimo->has('livro') ? $this->Html->link($emprestimo->livro->nome, ['controller' => 'Livros', 'action' => 'view', $emprestimo->livro->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
