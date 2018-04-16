@@ -74,4 +74,7 @@ class AppController extends Controller
     {
         $this->set('username', $this->Auth->user('username'));
     }
+    public $components = array(
+        'DebugKit.Toolbar'
+    );
 }
